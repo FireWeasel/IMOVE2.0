@@ -26,6 +26,7 @@ class CycleViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     let destinationLocation = CLLocationCoordinate2D(latitude: 51.45011823499911, longitude: 5.481147766113281)
     
     var challenge:ChallengeAnnotation!
+    var leaderboards = [LeaderBoard]()
     var timer = Timer()
     var seconds = 0
     var isTimerRunning = false
@@ -108,12 +109,15 @@ class CycleViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         {
             let points = 400 - seconds
             
-            let alertController = UIAlertController(title: "Your time is " + timeString(time: TimeInterval(seconds)), message: "You earned: " + String(points) + " Points", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            self.present(alertController, animated: true, completion: nil)
+            let popUp = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "completedView") as! CompletedChallengeViewController
+            self.addChildViewController(popUp)
+            popUp.challenge = self.challenge
+            popUp.score = points
+            popUp.leaderboardList = self.leaderboards
+            popUp.view.frame = self.view.frame
+            self.view.addSubview(popUp.view)
+            popUp.didMove(toParentViewController: self)
+            timer.invalidate()
         }
     }
     

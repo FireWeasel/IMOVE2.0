@@ -14,6 +14,9 @@ class RatingViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var gradeLabel: UILabel!
     
+    var leaderboards = [LeaderBoard]()
+    var challenge:ChallengeAnnotation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,12 +35,14 @@ class RatingViewController: UIViewController {
     @IBAction func Grade(_ sender: UIButton) {
         var points = (Int(gradeLabel.text!)! * 3)
         
-        let alertController = UIAlertController(title: "Point: " + String(Double(gradeLabel.text!)!/10), message: "You earned: " + String(points) + " Points", preferredStyle: .alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        self.present(alertController, animated: true, completion: nil)
+        let popUp = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "completedView") as! CompletedChallengeViewController
+        self.addChildViewController(popUp)
+        popUp.challenge = self.challenge
+        popUp.score = points
+        popUp.leaderboardList = self.leaderboards
+        popUp.view.frame = self.view.frame
+        self.view.addSubview(popUp.view)
+        popUp.didMove(toParentViewController: self)
     }
     
     

@@ -12,9 +12,11 @@ import Foundation
 class LeaderBoard: NSObject {
     var name:String!
     var score:Int!
+    var profilePicture:String!
     
-    init(name: String, score: Int) {
+    init(name: String, score: Int, picture: String) {
         self.name = name
         self.score = score
+        self.profilePicture = picture
     }
 }

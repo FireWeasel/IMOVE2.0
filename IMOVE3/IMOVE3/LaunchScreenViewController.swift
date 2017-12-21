@@ -7,18 +7,39 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LaunchScreenViewController: UIViewController {
 
+    var handle: AuthStateDidChangeListenerHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        LoadNextView()
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func LoadNextView() {
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            if Auth.auth().currentUser != nil {
+                let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "mainTabBarController") as! TabBarViewController
+                let navController = UINavigationController(rootViewController: VC1)
+                self.present(navController, animated:true, completion: nil)
+                
+                
+            } else {
+                
+                let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "Challenge") as! LoginViewController
+                self.present(VC1, animated:true, completion: nil)
+            }
+        }
     }
     
 

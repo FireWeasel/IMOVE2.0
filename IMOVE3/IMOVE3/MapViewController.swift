@@ -159,7 +159,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             if let dictionary = snapshot.value as? [String:AnyObject] {
                 let name = dictionary["name"] as! String
                 let points = dictionary["points"] as! Int
-                var leaderboard = LeaderBoard(name: name, score: points)
+                let picture = dictionary["picture"] as! String
+                var leaderboard = LeaderBoard(name: name, score: points, picture: picture)
                 print(leaderboard)
                 
                 self.leaderboards.append(leaderboard)

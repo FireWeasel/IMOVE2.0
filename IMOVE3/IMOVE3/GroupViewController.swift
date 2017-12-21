@@ -17,6 +17,7 @@ class GroupViewController: UIViewController {
     @IBOutlet weak var descLabel: UITextView!
     @IBOutlet weak var nameLabel: UILabel!
     var challenge:ChallengeAnnotation!
+    var leaderboards = [LeaderBoard]()
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
@@ -37,7 +38,9 @@ class GroupViewController: UIViewController {
     @IBAction func Login(_ sender: Any) {
         if(nameTextfield.text == "admin" && passwordTextfield.text == "admin")
         {
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InstructorLogIn")
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "InstructorLogIn") as! RatingViewController
+            nextViewController.leaderboards = self.leaderboards
+            nextViewController.challenge = self.challenge
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
         else

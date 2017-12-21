@@ -30,7 +30,7 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
         tableView.delegate = self
         tableView.dataSource = self
         self.nameLabel.text = challenge.name
-        self.nrLabel.text = String(self.count)
+        self.nrLabel.text = String(self.score)
         ref = Database.database().reference()
 
         // Do any additional setup after loading the view.
@@ -47,7 +47,6 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
     */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("hey")
         return leaderboardList.count
         
     }
@@ -59,9 +58,22 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for:indexPath)
-        print(leaderboardList)
-        cell.textLabel?.text = leaderboardList[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for:indexPath) as! LeaderboardTableViewCell
+        cell.nameLabel?.text = leaderboardList[indexPath.row].name
+        let leaderboard = leaderboardList[indexPath.row]
+        if let leaderBoardImages = leaderboard.profilePicture {
+            let url = URL(string: leaderBoardImages)
+            URLSession.shared.dataTask(with: url!, completionHandler: { (data,response ,error ) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                DispatchQueue.main.async {
+                    cell.imageView?.image = UIImage(data: data!)
+                }
+            }).resume()
+        }
+        
         return cell
     }
     
@@ -82,23 +94,23 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
                 
                 var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level)
                 
-                var image:UIImage!
+                /*var image:UIImage!
                 if let imageURL = user.profileImage {
                     let url = URL(string: imageURL)
                     URLSession.shared.dataTask(with: url!, completionHandler: { (data,response ,error ) in
                         if error != nil {
                             print(error!)
                             return
-                        }
-                        DispatchQueue.main.async {
-                            image = UIImage(data:data!)
-                            self.score = self.count * 10
+                        }*/
+                DispatchQueue.main.async {
+                            //image = UIImage(data:data!)
                             
                             //update object in database for leaderboars
                             let leaderboardHandle = self.ref.child("Leaderboards").child(self.challenge.name).child(uid)
                             var leaderboardValue = [
                                 "name": name,
-                                "points": self.score
+                                "points": self.score,
+                                "picture": profileImage
                                 ] as [String : Any]
                             leaderboardHandle.updateChildValues(leaderboardValue)
                             
@@ -115,9 +127,7 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
                             
                             userHandle.updateChildValues(userValue)
                             
-                        }
-                    }).resume()
-                }
+                  }
             }
         }
     }

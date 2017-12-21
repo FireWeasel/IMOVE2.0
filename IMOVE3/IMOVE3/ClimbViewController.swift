@@ -22,6 +22,7 @@ class ClimbViewController: UIViewController {
     @IBOutlet weak var parcourImage: UIImageView!
     @IBOutlet weak var imageLabel: UILabel!
     var challenge:ChallengeAnnotation!
+    var leaderboard = [LeaderBoard]()
     
     var timer = Timer()
     var seconds = 0
@@ -53,12 +54,16 @@ class ClimbViewController: UIViewController {
     @IBAction func Finish(_ sender: UIButton) {
         stopTimer()
         pointsEarned = 250 - seconds;
-        let alertController = UIAlertController(title: "Finished!", message: "You earned: " + String(pointsEarned) + " Points", preferredStyle: .alert)
         
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(defaultAction)
+        let popUp = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "completedView") as! CompletedChallengeViewController
+        self.addChildViewController(popUp)
+        popUp.challenge = self.challenge
+        popUp.score = pointsEarned
+        popUp.leaderboardList = self.leaderboard
+        popUp.view.frame = self.view.frame
+        self.view.addSubview(popUp.view)
+        popUp.didMove(toParentViewController: self)
         
-        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func Stop(_ sender: UIButton) {

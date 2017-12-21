@@ -36,6 +36,7 @@ class CustomAnnotationView: UIView {
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "cycle") as! CycleViewController
             nextViewController.challenge = self.challengeObjec
+            nextViewController.leaderboards = self.leaderboard
             //nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
@@ -43,6 +44,7 @@ class CustomAnnotationView: UIView {
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "group") as! GroupViewController
             nextViewController.challenge = self.challengeObjec
+            nextViewController.leaderboards = self.leaderboard
             //nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
@@ -50,6 +52,7 @@ class CustomAnnotationView: UIView {
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "climbing") as! ClimbViewController
             nextViewController.challenge = self.challengeObjec
+            nextViewController.leaderboard = self.leaderboard
             //nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }
@@ -64,6 +67,7 @@ class CustomAnnotationView: UIView {
         {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "tricep") as! TricepViewController
             nextViewController.challenge = self.challengeObjec
+            nextViewController.leaderboards = self.leaderboard
             //nextViewController.leaderboard = self.leaderboard
             UIApplication.topViewController()?.present(nextViewController, animated: true, completion: nil)
         }

@@ -24,6 +24,7 @@
 		F511CE921FC6BA6C004A5A53 /* IMOVE3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE911FC6BA6C004A5A53 /* IMOVE3UITests.swift */; };
 		F511CEA01FC6BC65004A5A53 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE9F1FC6BC65004A5A53 /* MapViewController.swift */; };
 		F511CEB81FD0366B004A5A53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F511CEB71FD0366B004A5A53 /* GoogleService-Info.plist */; };
+		F517D8E21FEBE43F00B1729F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F517D8E11FEBE43D00B1729F /* LaunchScreenViewController.swift */; };
 		F51EB79B1FD94893004FBD74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51EB79A1FD94893004FBD74 /* LoginViewController.swift */; };
 		F56853941FEBB6110082A7AD /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853931FEBB6110082A7AD /* RewardsViewController.swift */; };
 		F56853961FEBBB3E0082A7AD /* RewardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */; };
@@ -95,6 +96,7 @@
 		F511CE931FC6BA6C004A5A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F511CE9F1FC6BC65004A5A53 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F511CEB71FD0366B004A5A53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F517D8E11FEBE43D00B1729F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		F51EB79A1FD94893004FBD74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F56853931FEBB6110082A7AD /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTableViewCell.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				F5077B021FE3C8CE00A54887 /* LeaderBoards.swift */,
 				F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */,
 				F511CE731FC6BA6C004A5A53 /* ViewController.swift */,
+				F517D8E11FEBE43D00B1729F /* LaunchScreenViewController.swift */,
 				F511CE751FC6BA6C004A5A53 /* Main.storyboard */,
 				F56853991FEBC8480082A7AD /* RewardBuyViewController.swift */,
 				F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */,
@@ -565,6 +568,7 @@
 				F568A3361FD932A50043215C /* RegisterViewController.swift in Sources */,
 				F511CE741FC6BA6C004A5A53 /* ViewController.swift in Sources */,
 				F568A3381FD96FC30043215C /* TabBarViewController.swift in Sources */,
+				F517D8E21FEBE43F00B1729F /* LaunchScreenViewController.swift in Sources */,
 				F56853981FEBBE2A0082A7AD /* Reward.swift in Sources */,
 				F569FA3C1FE2EF3C00B96059 /* RatingViewController.swift in Sources */,
 				F5077B031FE3C8CF00A54887 /* LeaderBoards.swift in Sources */,

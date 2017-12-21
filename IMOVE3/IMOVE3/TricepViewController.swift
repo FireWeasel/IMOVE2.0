@@ -21,6 +21,7 @@ class TricepViewController: UIViewController {
     @IBOutlet weak var sliderDescLabel: UILabel!
     
     var challenge:ChallengeAnnotation!
+    var leaderboards = [LeaderBoard]()
     
     var timer = Timer()
     var seconds = 10
@@ -52,12 +53,15 @@ class TricepViewController: UIViewController {
     @IBAction func SetScore(_ sender: UIButton) {
         pointsEarned = triceps * 3
         
-        let alertController = UIAlertController(title: "You're done!", message: "You earned: " + String(pointsEarned) + " Points", preferredStyle: .alert)
+        let popUp = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "completedView") as! CompletedChallengeViewController
+        self.addChildViewController(popUp)
+        popUp.challenge = self.challenge
+        popUp.score = pointsEarned
+        popUp.leaderboardList = self.leaderboards
+        popUp.view.frame = self.view.frame
+        self.view.addSubview(popUp.view)
+        popUp.didMove(toParentViewController: self)
         
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        self.present(alertController, animated: true, completion: nil)
     }
     
     

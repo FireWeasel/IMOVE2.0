@@ -49,7 +49,7 @@ class PushUpViewController: UIViewController {
             self.addChildViewController(popUp)
             popUp.challenge = self.challenge
             //popUp.nameLabel.text = self.challenge.name
-            popUp.count = self.counter
+            popUp.score = self.counter * 10
             popUp.leaderboardList = self.leaderboard
             popUp.view.frame = self.view.frame
             self.view.addSubview(popUp.view)
