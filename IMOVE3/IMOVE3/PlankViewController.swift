@@ -14,6 +14,8 @@ class PlankViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var exerciseButton: UIButton!
+    @IBOutlet weak var StartButton: UIButton!
+    @IBOutlet weak var StopEarlyButton: UIButton!
     
     var challenge:ChallengeAnnotation!
     
@@ -27,6 +29,8 @@ class PlankViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         exerciseButton.layer.cornerRadius = 10
+        StartButton.layer.cornerRadius = 10
+        StopEarlyButton.layer.cornerRadius = 10
         exerciseButton.clipsToBounds = true
         self.nameLabel.text = challenge.name!
         self.descLabel.text = challenge.desc!
