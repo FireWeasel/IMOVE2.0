@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RewardsViewController: UIViewController {
     
     
 
@@ -22,8 +22,6 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableRewards.delegate = self
-        tableRewards.dataSource = self
         ref = Database.database().reference()
         LoadProfile()
     }
@@ -35,13 +33,7 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     //MARK: Functions
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
     
     
     
