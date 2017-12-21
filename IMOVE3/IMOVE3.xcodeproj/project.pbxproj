@@ -28,6 +28,7 @@
 		F56853941FEBB6110082A7AD /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853931FEBB6110082A7AD /* RewardsViewController.swift */; };
 		F56853961FEBBB3E0082A7AD /* RewardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */; };
 		F56853981FEBBE2A0082A7AD /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853971FEBBE2A0082A7AD /* Reward.swift */; };
+		F568539A1FEBC8480082A7AD /* RewardBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853991FEBC8480082A7AD /* RewardBuyViewController.swift */; };
 		F568A2EE1FD1483C0043215C /* CustomAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F568A2ED1FD1483C0043215C /* CustomAnnotationView.xib */; };
 		F568A2F01FD1486B0043215C /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */; };
 		F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */; };
@@ -98,6 +99,7 @@
 		F56853931FEBB6110082A7AD /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTableViewCell.swift; sourceTree = "<group>"; };
 		F56853971FEBBE2A0082A7AD /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		F56853991FEBC8480082A7AD /* RewardBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardBuyViewController.swift; sourceTree = "<group>"; };
 		F568A2ED1FD1483C0043215C /* CustomAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAnnotationView.xib; sourceTree = "<group>"; };
 		F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeAnnotation.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */,
 				F511CE731FC6BA6C004A5A53 /* ViewController.swift */,
 				F511CE751FC6BA6C004A5A53 /* Main.storyboard */,
+				F56853991FEBC8480082A7AD /* RewardBuyViewController.swift */,
 				F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */,
 				F56853931FEBB6110082A7AD /* RewardsViewController.swift */,
 				F56853971FEBBE2A0082A7AD /* Reward.swift */,
@@ -580,6 +583,7 @@
 				F51EB79B1FD94893004FBD74 /* LoginViewController.swift in Sources */,
 				F505B0A01FE27B260085455D /* CycleViewController.swift in Sources */,
 				F56853941FEBB6110082A7AD /* RewardsViewController.swift in Sources */,
+				F568539A1FEBC8480082A7AD /* RewardBuyViewController.swift in Sources */,
 				F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */,
 				F505B09E1FE276580085455D /* SitUpViewController.swift in Sources */,
 			);

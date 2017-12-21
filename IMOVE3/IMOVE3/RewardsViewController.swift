@@ -59,8 +59,9 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let name = dictionary["name"] as! String
                 let code = dictionary["code"] as! String
                 let price = dictionary["price"] as! Int
+                let desc = dictionary["desc"] as! String
                 
-                let reward = Reward(name: name, code: code, points: price)
+                let reward = Reward(name: name, code: code, points: price, desc: desc)
                 
                 self.rewards.append(reward)
                 DispatchQueue.main.async {
@@ -100,6 +101,19 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
                         }
                     }).resume()
                 }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChooseRewards" {
+            if let indexPath = self.tableRewards.indexPathForSelectedRow {
+                let controller = segue.destination as! RewardBuyViewController
+                let value = rewards[indexPath.row]
+                let points = Int(pointsLabel.text!)
+                print(value)
+                controller.reward = value
+                controller.points = points
             }
         }
     }
