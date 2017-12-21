@@ -65,6 +65,10 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
         return cell
     }
     
+    
+    
+    
+    
 
     func LoadProfile()
     {

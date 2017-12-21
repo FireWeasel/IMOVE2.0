@@ -25,6 +25,9 @@
 		F511CEA01FC6BC65004A5A53 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511CE9F1FC6BC65004A5A53 /* MapViewController.swift */; };
 		F511CEB81FD0366B004A5A53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F511CEB71FD0366B004A5A53 /* GoogleService-Info.plist */; };
 		F51EB79B1FD94893004FBD74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51EB79A1FD94893004FBD74 /* LoginViewController.swift */; };
+		F56853941FEBB6110082A7AD /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853931FEBB6110082A7AD /* RewardsViewController.swift */; };
+		F56853961FEBBB3E0082A7AD /* RewardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */; };
+		F56853981FEBBE2A0082A7AD /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56853971FEBBE2A0082A7AD /* Reward.swift */; };
 		F568A2EE1FD1483C0043215C /* CustomAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F568A2ED1FD1483C0043215C /* CustomAnnotationView.xib */; };
 		F568A2F01FD1486B0043215C /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */; };
 		F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */; };
@@ -92,6 +95,9 @@
 		F511CE9F1FC6BC65004A5A53 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F511CEB71FD0366B004A5A53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F51EB79A1FD94893004FBD74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F56853931FEBB6110082A7AD /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
+		F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTableViewCell.swift; sourceTree = "<group>"; };
+		F56853971FEBBE2A0082A7AD /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		F568A2ED1FD1483C0043215C /* CustomAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAnnotationView.xib; sourceTree = "<group>"; };
 		F568A2EF1FD1486B0043215C /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		F568A2F71FD151A90043215C /* ChallengeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeAnnotation.swift; sourceTree = "<group>"; };
@@ -193,6 +199,9 @@
 				F511CE711FC6BA6C004A5A53 /* AppDelegate.swift */,
 				F511CE731FC6BA6C004A5A53 /* ViewController.swift */,
 				F511CE751FC6BA6C004A5A53 /* Main.storyboard */,
+				F56853951FEBBB3E0082A7AD /* RewardTableViewCell.swift */,
+				F56853931FEBB6110082A7AD /* RewardsViewController.swift */,
+				F56853971FEBBE2A0082A7AD /* Reward.swift */,
 				F57D266B1FEBA3A200501742 /* LeaderboardTableViewCell.swift */,
 				F568A3371FD96FC30043215C /* TabBarViewController.swift */,
 				F51EB79A1FD94893004FBD74 /* LoginViewController.swift */,
@@ -547,11 +556,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56853961FEBBB3E0082A7AD /* RewardTableViewCell.swift in Sources */,
 				F569FA3A1FE2E83E00B96059 /* GroupViewController.swift in Sources */,
 				F505B0A41FE3CD480085455D /* CompletedChallengeViewController.swift in Sources */,
 				F568A3361FD932A50043215C /* RegisterViewController.swift in Sources */,
 				F511CE741FC6BA6C004A5A53 /* ViewController.swift in Sources */,
 				F568A3381FD96FC30043215C /* TabBarViewController.swift in Sources */,
+				F56853981FEBBE2A0082A7AD /* Reward.swift in Sources */,
 				F569FA3C1FE2EF3C00B96059 /* RatingViewController.swift in Sources */,
 				F5077B031FE3C8CF00A54887 /* LeaderBoards.swift in Sources */,
 				F568A2FA1FD155C10043215C /* AnnotationView.swift in Sources */,
@@ -568,6 +579,7 @@
 				F569FA461FE3E92E00B96059 /* TricepViewController.swift in Sources */,
 				F51EB79B1FD94893004FBD74 /* LoginViewController.swift in Sources */,
 				F505B0A01FE27B260085455D /* CycleViewController.swift in Sources */,
+				F56853941FEBB6110082A7AD /* RewardsViewController.swift in Sources */,
 				F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */,
 				F505B09E1FE276580085455D /* SitUpViewController.swift in Sources */,
 			);
