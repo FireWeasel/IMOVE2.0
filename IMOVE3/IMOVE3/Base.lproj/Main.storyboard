@@ -36,10 +36,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opy-KS-Zht">
                                 <rect key="frame" x="289" y="579" width="77" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="77" id="2Cs-it-Z0h"/>
-                                    <constraint firstAttribute="height" constant="30" id="ap7-Bs-ocO"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Center">
                                     <color key="titleColor" red="1" green="0.31372549019607843" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,18 +47,19 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPU-2b-vK2">
                                 <rect key="frame" x="266" y="35" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Dbt-bl-OIR"/>
-                                    <constraint firstAttribute="width" constant="100" id="leL-8k-ia4"/>
+                                    <constraint firstAttribute="height" constant="100" id="nwu-iY-4IV"/>
                                 </constraints>
                                 <state key="normal" image="ilS1ri2v"/>
                                 <connections>
                                     <segue destination="QPS-pE-1OD" kind="show" id="BCq-oh-CgO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-63-LQp">
-                                <rect key="frame" x="340" y="95" width="35" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-63-LQp">
+                                <rect key="frame" x="304" y="95" width="35" height="49"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="mW8-kx-PxM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="58"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -72,14 +69,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Kfk-38-SQz" firstAttribute="trailing" secondItem="GPU-2b-vK2" secondAttribute="trailing" constant="9" id="5oL-6M-UX0"/>
-                            <constraint firstItem="Kfk-38-SQz" firstAttribute="trailing" secondItem="Opy-KS-Zht" secondAttribute="trailing" constant="9" id="M4U-gg-yRb"/>
-                            <constraint firstItem="Kfk-38-SQz" firstAttribute="bottom" secondItem="Opy-KS-Zht" secondAttribute="bottom" constant="9" id="NE0-97-M6d"/>
-                            <constraint firstItem="GPU-2b-vK2" firstAttribute="top" secondItem="Kfk-38-SQz" secondAttribute="top" constant="15" id="X8G-mG-f7q"/>
-                            <constraint firstItem="nLp-mm-CQ5" firstAttribute="bottom" secondItem="Kfk-38-SQz" secondAttribute="bottom" id="Xvr-mF-Uor"/>
-                            <constraint firstItem="nLp-mm-CQ5" firstAttribute="leading" secondItem="Kfk-38-SQz" secondAttribute="leading" id="aYA-6l-sro"/>
-                            <constraint firstItem="nLp-mm-CQ5" firstAttribute="top" secondItem="NEV-cu-nZj" secondAttribute="top" id="gIE-yO-OKQ"/>
-                            <constraint firstItem="nLp-mm-CQ5" firstAttribute="trailing" secondItem="Kfk-38-SQz" secondAttribute="trailing" id="zTE-Ke-Nf7"/>
+                            <constraint firstItem="GPU-2b-vK2" firstAttribute="top" secondItem="Kfk-38-SQz" secondAttribute="top" constant="15" id="2c3-v8-48V"/>
+                            <constraint firstItem="nLp-mm-CQ5" firstAttribute="top" secondItem="NEV-cu-nZj" secondAttribute="top" id="6TF-R3-eXb"/>
+                            <constraint firstItem="nLp-mm-CQ5" firstAttribute="bottom" secondItem="Kfk-38-SQz" secondAttribute="bottom" id="Cvg-qX-wTh"/>
+                            <constraint firstItem="GPU-2b-vK2" firstAttribute="leading" secondItem="Kfk-38-SQz" secondAttribute="leading" constant="266" id="GaA-1i-8QL"/>
+                            <constraint firstItem="Kfk-38-SQz" firstAttribute="trailing" secondItem="GPU-2b-vK2" secondAttribute="trailing" constant="9" id="IXr-jV-xFn"/>
+                            <constraint firstItem="Sdb-63-LQp" firstAttribute="top" secondItem="Kfk-38-SQz" secondAttribute="top" constant="75" id="JYV-TU-FGS"/>
+                            <constraint firstItem="Kfk-38-SQz" firstAttribute="bottom" secondItem="Opy-KS-Zht" secondAttribute="bottom" constant="9" id="WH1-Pk-BGS"/>
+                            <constraint firstItem="nLp-mm-CQ5" firstAttribute="leading" secondItem="NEV-cu-nZj" secondAttribute="leading" id="c97-KP-H2p"/>
+                            <constraint firstAttribute="trailing" secondItem="nLp-mm-CQ5" secondAttribute="trailing" id="ez8-pP-gbl"/>
+                            <constraint firstItem="Sdb-63-LQp" firstAttribute="leading" secondItem="Kfk-38-SQz" secondAttribute="leading" constant="304" id="f3V-89-cWA"/>
+                            <constraint firstItem="GPU-2b-vK2" firstAttribute="trailing" secondItem="Opy-KS-Zht" secondAttribute="trailing" id="k9h-hE-lhW"/>
+                            <constraint firstItem="Opy-KS-Zht" firstAttribute="leading" secondItem="Kfk-38-SQz" secondAttribute="leading" constant="289" id="xiY-SP-vAy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kfk-38-SQz"/>
                     </view>
