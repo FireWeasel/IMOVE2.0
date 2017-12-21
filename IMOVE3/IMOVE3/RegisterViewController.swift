@@ -118,7 +118,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         nameTextField.text = ""
         passwordTextField.text = ""
-        profileImage = #imageLiteral(resourceName: "defaultPhoto")
+        
     }
     
     

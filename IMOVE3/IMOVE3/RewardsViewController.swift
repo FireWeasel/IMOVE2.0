@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class RewardsViewController: UIViewController {
+class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
 
@@ -20,10 +20,15 @@ class RewardsViewController: UIViewController {
     var ref:DatabaseReference!
     var refHandle:UInt!
     
+    var rewards = [Reward]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableRewards.delegate = self
+        tableRewards.dataSource = self
         ref = Database.database().reference()
         LoadProfile()
+        LoadRewards()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,14 +38,36 @@ class RewardsViewController: UIViewController {
     
     
     //MARK: Functions
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return rewards.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RewardCell", for:indexPath) as! RewardTableViewCell
+        cell.rewardName?.text = rewards[indexPath.row].name
+        cell.rewardPoints?.text = String(rewards[indexPath.row].points)
+        return cell
+    }
     
     
     
     
     func LoadRewards()
     {
-        
+        refHandle = ref.child("Rewards").observe(.childAdded, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: AnyObject]{
+                let name = dictionary["name"] as! String
+                let code = dictionary["code"] as! String
+                let price = dictionary["price"] as! Int
+                
+                let reward = Reward(name: name, code: code, points: price)
+                
+                self.rewards.append(reward)
+                DispatchQueue.main.async {
+                    self.tableRewards.reloadData()
+                }
+            }
+        })
     }
     
     
