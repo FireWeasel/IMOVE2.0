@@ -22,4 +22,11 @@ class User:NSObject {
         self.level = level
         self.totalScore = totalScore
     }
+    
+    init(name: String, profileImage:String, level:Int) {
+        self.name = name
+        self.profileImage = profileImage
+        self.level = level
+        self.totalScore = 0
+    }
 }

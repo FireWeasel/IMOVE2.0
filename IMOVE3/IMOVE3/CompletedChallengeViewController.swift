@@ -41,10 +41,7 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
         // Dispose of any resources that can be recreated.
     }
     
-    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    */
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return leaderboardList.count
