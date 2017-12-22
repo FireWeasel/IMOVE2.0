@@ -54,7 +54,6 @@
                                     <constraint firstAttribute="width" constant="100" id="ecR-mv-JK6"/>
                                     <constraint firstAttribute="width" secondItem="GPU-2b-vK2" secondAttribute="height" multiplier="1:1" id="zs0-IT-Ri5"/>
                                 </constraints>
-                                <state key="normal" image="ilS1ri2v"/>
                                 <connections>
                                     <segue destination="QPS-pE-1OD" kind="show" id="BCq-oh-CgO"/>
                                 </connections>
@@ -1434,7 +1433,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TemplateProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="Pg2-7S-usQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pg2-7S-usQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="191"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2I-2d-swf">
@@ -1449,8 +1448,8 @@
                                     <segue destination="jqc-Xh-Bwc" kind="show" id="kzJ-e5-b9c"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jackeline Sparrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJG-3a-jQc">
-                                <rect key="frame" x="85" y="122" width="206" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJG-3a-jQc">
+                                <rect key="frame" x="167" y="122" width="42" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="QKV-g5-rGk"/>
                                 </constraints>
@@ -2657,7 +2656,6 @@
         <image name="SitUpper" width="3446" height="2448"/>
         <image name="Splash screen" width="375" height="667"/>
         <image name="Stopwatch" width="160" height="160"/>
-        <image name="TemplateProfilePic" width="750" height="422"/>
         <image name="Tricep Dips" width="769" height="244"/>
         <image name="Tricep Dips Down" width="1920" height="1219"/>
         <image name="Tricep Dips Up" width="1920" height="1219"/>
@@ -2667,13 +2665,12 @@
         <image name="WeightLift" width="160" height="160"/>
         <image name="dump" width="50" height="50"/>
         <image name="grouppic" width="2251" height="1500"/>
-        <image name="ilS1ri2v" width="512" height="512"/>
         <image name="pexels-photo-235922" width="2259" height="1500"/>
         <image name="situppp" width="2250" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4Om-6N-0lc"/>
-        <segue reference="fZ4-ST-bSi"/>
+        <segue reference="kzJ-e5-b9c"/>
         <segue reference="BCq-oh-CgO"/>
     </inferredMetricsTieBreakers>
 </document>
