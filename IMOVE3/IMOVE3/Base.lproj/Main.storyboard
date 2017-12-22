@@ -1909,6 +1909,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g52-Te-TMR">
                                 <rect key="frame" x="337" y="20" width="22" height="22"/>
+                                <connections>
+                                    <action selector="addFriends:" destination="Apk-aj-sDd" eventType="touchUpInside" id="bd1-0W-yB6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1951,19 +1954,54 @@
         <!--Add Friend Table View Controller-->
         <scene sceneID="oRT-zM-PpF">
             <objects>
-                <tableViewController id="a7p-bw-Nlz" customClass="AddFriendTableViewController" customModule="IMOVE3" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="addFriend" id="a7p-bw-Nlz" customClass="AddFriendTableViewController" customModule="IMOVE3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6UN-I0-DX7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e3f-rl-SXc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addFriendCell" id="e3f-rl-SXc" customClass="AddFriendTableViewCell" customModule="IMOVE3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e3f-rl-SXc" id="qnH-fp-Y73">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zW8-hZ-t27">
+                                            <rect key="frame" x="16" y="0.0" width="46" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="zW8-hZ-t27" secondAttribute="height" multiplier="23:22" id="ho1-Ot-Wuf"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-GM-qzc">
+                                            <rect key="frame" x="119" y="12" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjv-qb-BGe">
+                                            <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="addFriend:" destination="a7p-bw-Nlz" eventType="touchUpInside" id="zf3-qf-CvZ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="zW8-hZ-t27" secondAttribute="bottom" id="1j9-yf-jKH"/>
+                                        <constraint firstAttribute="trailing" secondItem="zW8-hZ-t27" secondAttribute="trailing" constant="313" id="2Zl-3f-xc1"/>
+                                        <constraint firstItem="yVF-GM-qzc" firstAttribute="leading" secondItem="zW8-hZ-t27" secondAttribute="trailing" constant="57" id="Fkt-va-hnB"/>
+                                        <constraint firstItem="zW8-hZ-t27" firstAttribute="top" secondItem="qnH-fp-Y73" secondAttribute="top" id="Iec-80-TeR"/>
+                                        <constraint firstItem="Xjv-qb-BGe" firstAttribute="centerY" secondItem="yVF-GM-qzc" secondAttribute="centerY" id="KVD-mz-Bt4"/>
+                                        <constraint firstItem="yVF-GM-qzc" firstAttribute="centerY" secondItem="zW8-hZ-t27" secondAttribute="centerY" id="VYh-VU-pOg"/>
+                                        <constraint firstItem="Xjv-qb-BGe" firstAttribute="trailing" secondItem="qnH-fp-Y73" secondAttribute="trailingMargin" id="mmh-DI-yhf"/>
+                                        <constraint firstItem="zW8-hZ-t27" firstAttribute="leading" secondItem="qnH-fp-Y73" secondAttribute="leading" constant="16" id="nfa-Xw-7Tq"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="yVF-GM-qzc" id="YL7-wi-brI"/>
+                                    <outlet property="profilePicImageView" destination="zW8-hZ-t27" id="T38-5c-7DF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1974,7 +2012,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAd-o0-vXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-368" y="1094"/>
+            <point key="canvasLocation" x="-368.80000000000001" y="1093.4032983508246"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="yJs-yj-0Dl">
@@ -2628,7 +2666,7 @@
         <image name="situppp" width="2250" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ckZ-Oe-Gwy"/>
+        <segue reference="4Om-6N-0lc"/>
         <segue reference="Xyy-rO-X2Q"/>
     </inferredMetricsTieBreakers>
 </document>

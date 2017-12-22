@@ -81,5 +81,11 @@ class FriendViewController: UIViewController,UITableViewDelegate, UITableViewDat
             }
         })
     }
-
+    @IBAction func addFriends(_ sender: Any) {
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "addFriend") as! AddFriendTableViewController
+        VC1.friends = self.friends
+        self.present(VC1, animated:true, completion: nil)
+        
+    }
+    
 }

@@ -45,6 +45,7 @@
 		F569FA3E1FE2F4D200B96059 /* ClimbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA3D1FE2F4D200B96059 /* ClimbViewController.swift */; };
 		F569FA441FE3E31D00B96059 /* PlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA431FE3E31D00B96059 /* PlankViewController.swift */; };
 		F569FA461FE3E92E00B96059 /* TricepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA451FE3E92E00B96059 /* TricepViewController.swift */; };
+		F57630A51FECF6A700ECDC85 /* AddFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57630A41FECF6A700ECDC85 /* AddFriendTableViewCell.swift */; };
 		F57D266C1FEBA3A200501742 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D266B1FEBA3A200501742 /* LeaderboardTableViewCell.swift */; };
 		F5C4BDC51FDA96B600BC64BE /* PushUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */; };
 		F5D799801FD17D47004FDF3A /* chal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5D7997D1FD17D46004FDF3A /* chal-1.jpg */; };
@@ -119,6 +120,7 @@
 		F569FA3D1FE2F4D200B96059 /* ClimbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbViewController.swift; sourceTree = "<group>"; };
 		F569FA431FE3E31D00B96059 /* PlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankViewController.swift; sourceTree = "<group>"; };
 		F569FA451FE3E92E00B96059 /* TricepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricepViewController.swift; sourceTree = "<group>"; };
+		F57630A41FECF6A700ECDC85 /* AddFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendTableViewCell.swift; sourceTree = "<group>"; };
 		F57D266B1FEBA3A200501742 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpViewController.swift; sourceTree = "<group>"; };
 		F5D7997D1FD17D46004FDF3A /* chal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chal-1.jpg"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				F511CE731FC6BA6C004A5A53 /* ViewController.swift */,
 				F517D8E11FEBE43D00B1729F /* LaunchScreenViewController.swift */,
 				F511CE751FC6BA6C004A5A53 /* Main.storyboard */,
+				F57630A41FECF6A700ECDC85 /* AddFriendTableViewCell.swift */,
 				F517D8E51FEBF04600B1729F /* AddFriendTableViewController.swift */,
 				F517D8E31FEBE8B200B1729F /* FriendsTableViewCell.swift */,
 				F56853991FEBC8480082A7AD /* RewardBuyViewController.swift */,
@@ -584,6 +587,7 @@
 				F517D8E41FEBE8B200B1729F /* FriendsTableViewCell.swift in Sources */,
 				F568A2F01FD1486B0043215C /* CustomAnnotationView.swift in Sources */,
 				F57D266C1FEBA3A200501742 /* LeaderboardTableViewCell.swift in Sources */,
+				F57630A51FECF6A700ECDC85 /* AddFriendTableViewCell.swift in Sources */,
 				F568A3321FD2BEBF0043215C /* ProfileViewController.swift in Sources */,
 				F568A3341FD2BF1F0043215C /* User.swift in Sources */,
 				F505B0A21FE284D20085455D /* FriendViewController.swift in Sources */,
