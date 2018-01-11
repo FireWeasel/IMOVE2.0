@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nLp-mm-CQ5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="9U7-hO-R41" appends="YES" id="NJL-Pt-ktL"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opy-KS-Zht">
-                                <rect key="frame" x="302" y="536" width="64" height="30"/>
+                                <rect key="frame" x="302" y="580" width="64" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Opy-KS-Zht" secondAttribute="height" multiplier="32:15" id="2um-x8-3IZ"/>
@@ -72,6 +72,7 @@
                         <constraints>
                             <constraint firstItem="GPU-2b-vK2" firstAttribute="top" secondItem="Kfk-38-SQz" secondAttribute="top" constant="15" id="5MO-Sc-bhE"/>
                             <constraint firstItem="nLp-mm-CQ5" firstAttribute="leading" secondItem="Kfk-38-SQz" secondAttribute="leading" id="5lE-IT-ABT"/>
+                            <constraint firstItem="nLp-mm-CQ5" firstAttribute="top" secondItem="NEV-cu-nZj" secondAttribute="top" id="7Nv-Vd-P10"/>
                             <constraint firstItem="Kfk-38-SQz" firstAttribute="trailing" secondItem="Sdb-63-LQp" secondAttribute="trailing" constant="45" id="HYs-4q-hCB"/>
                             <constraint firstItem="Sdb-63-LQp" firstAttribute="top" secondItem="Kfk-38-SQz" secondAttribute="top" constant="74" id="OrO-cT-ueG"/>
                             <constraint firstItem="nLp-mm-CQ5" firstAttribute="top" secondItem="NEV-cu-nZj" secondAttribute="top" id="Pf4-Vq-MUM"/>
@@ -929,6 +930,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boxer" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-lW-Eyy">
+                                <rect key="frame" x="-34" y="354" width="442" height="313"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="For this challenge you have to do as many sit ups as possible in the given amount of time." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbZ-bh-C8M">
                                 <rect key="frame" x="61" y="66" width="255" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1004,9 +1008,6 @@
                                     <segue destination="jqc-Xh-Bwc" kind="show" id="FOI-zE-yHN"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boxer" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-lW-Eyy">
-                                <rect key="frame" x="-34" y="354" width="442" height="313"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1850,7 +1851,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pD5-WM-geL">
-                                <rect key="frame" x="0.0" y="107" width="375" height="511"/>
+                                <rect key="frame" x="0.0" y="107" width="375" height="555"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="gHn-vY-G53" customClass="FriendsTableViewCell" customModule="IMOVE3" customModuleProvider="target">
@@ -2026,7 +2027,7 @@
             </objects>
             <point key="canvasLocation" x="-368.80000000000001" y="1093.4032983508246"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Guide-->
         <scene sceneID="yJs-yj-0Dl">
             <objects>
                 <tableViewController id="9LS-d7-r3f" sceneMemberID="viewController">
@@ -2138,6 +2139,7 @@
                             <outlet property="delegate" destination="9LS-d7-r3f" id="nzP-lc-uIj"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Guide" selectedImage="dump" id="tc8-eu-Ve5"/>
                     <navigationItem key="navigationItem" id="824-0E-2Fh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -2241,9 +2243,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="mLf-fd-OQ2" kind="relationship" relationship="viewControllers" id="vKV-1J-01b"/>
                         <segue destination="X8Q-cg-UPT" kind="relationship" relationship="viewControllers" id="nbH-sc-w5h"/>
                         <segue destination="Apk-aj-sDd" kind="relationship" relationship="viewControllers" id="a5I-vu-PD0"/>
+                        <segue destination="9LS-d7-r3f" kind="relationship" relationship="viewControllers" id="kHA-CU-1aM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8h-K5-RAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2631,24 +2633,6 @@
             </objects>
             <point key="canvasLocation" x="-188" y="-1630.4347826086957"/>
         </scene>
-        <!--Guide-->
-        <scene sceneID="eHX-Bw-sEB">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mLf-fd-OQ2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Guide" image="dump" id="HhV-Ff-Bc2"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EvL-sx-aVK">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9LS-d7-r3f" kind="relationship" relationship="rootViewController" id="hPs-4p-nis"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t6V-HE-vao" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1713" y="-707"/>
-        </scene>
     </scenes>
     <resources>
         <image name="4a0fd54098b568dec059300fdc70220e" width="616" height="335"/>
@@ -2677,7 +2661,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4Om-6N-0lc"/>
-        <segue reference="tNF-Kp-VhT"/>
+        <segue reference="q1x-e0-4af"/>
         <segue reference="BCq-oh-CgO"/>
     </inferredMetricsTieBreakers>
 </document>
