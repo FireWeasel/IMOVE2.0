@@ -30,8 +30,8 @@ class LaunchScreenViewController: UIViewController {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if Auth.auth().currentUser != nil {
                 let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "mainTabBarController") as! TabBarViewController
-                let navController = UINavigationController(rootViewController: VC1)
-                self.present(navController, animated:true, completion: nil)
+                //let navController = UINavigationController(rootViewController: VC1)
+                self.present(VC1, animated:true, completion: nil)
                 
                 
             } else {

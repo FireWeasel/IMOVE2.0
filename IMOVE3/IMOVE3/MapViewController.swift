@@ -36,6 +36,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         LocationManagerStartUp()
         ref = Database.database().reference()
         LoadProfile()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
         //SetChallenges()
         
         coordinates = [[51.441748,5.483254],[51.445610,5.468737],[51.456007,5.476780]]
