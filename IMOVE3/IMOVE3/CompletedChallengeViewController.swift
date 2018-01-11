@@ -131,49 +131,21 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
     
     func CalcLevel(score: Int) -> Int
     {
-        if(score < 1000)
+        let Score1 = score / 1000
+        let Score2 = ((score - 10000) / 2000) + 10
+        let Score3 = ((score - 30000) / 3000) + 20
+        
+        if(score  < 10000)
         {
-            return 1
+            return Score1
         }
-        else if (score > 1000 && score < 2000)
+        else if(score > 10000 && score <= 30000)
         {
-            return 2
-        }
-        else if (score > 2000 && score < 3000)
-        {
-            return 3
-        }
-        else if (score > 3000 && score < 4000)
-        {
-            return 4
-        }
-        else if (score > 4000 && score < 5000)
-        {
-            return 5
-        }
-        else if (score > 5000 && score < 6000)
-        {
-            return 6
-        }
-        else if (score > 6000 && score < 7000)
-        {
-            return 7
-        }
-        else if (score > 7000 && score < 8000)
-        {
-            return 8
-        }
-        else if (score > 9000 && score < 10000)
-        {
-            return 9
-        }
-        else if (score > 10000 && score < 11000)
-        {
-            return 10
+            return Score2
         }
         else
         {
-            return 11
+            return Score3
         }
     }
 
