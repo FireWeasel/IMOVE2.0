@@ -17,6 +17,7 @@ class AddFriendTableViewController: UITableViewController {
     var ref:DatabaseReference!
     var refHandle:UInt!
     
+    @IBOutlet weak var addBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
@@ -25,6 +26,10 @@ class AddFriendTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        
+        
+        
         
         LoadUsers()
     }
@@ -58,6 +63,25 @@ class AddFriendTableViewController: UITableViewController {
                     let image = UIImage(data:data!)
                     cell.profilePicImageView?.image = image
                     cell.profilePicImageView.layer.cornerRadius = (image?.size.width)!/2
+                    let uid = (Auth.auth().currentUser?.uid)!
+                    for n in 0...self.friends.count - 1
+                    {
+                        self.ref.child("Friends").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                            
+                            if snapshot.hasChild(self.friends[n].name){
+                                
+                                cell.addBtn.setTitle("Added", for: .normal)
+                                cell.addBtn.isEnabled = false
+                                
+                            }else{
+                                
+                                cell.addBtn.setTitle("Add", for: .normal)
+                                cell.addBtn.isEnabled = true
+                            }
+                            
+                            
+                        })
+                    }
                 }
             }).resume()
         }

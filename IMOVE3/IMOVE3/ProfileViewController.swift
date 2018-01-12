@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import SpriteKit
 
 class ProfileViewController: UIViewController {
     //MARK: Properties
@@ -18,6 +19,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var UserNameLabel: UILabel!
     @IBOutlet weak var challengesLabel: UILabel!
     
+    @IBOutlet weak var progressBar: UIProgressView!
     var ref:DatabaseReference!
     var refHandle:UInt!
    
@@ -54,6 +56,7 @@ class ProfileViewController: UIViewController {
                 var challenges = dictionary["challenges"] as! Int
                 
                 var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level, challenges: challenges)
+                var progress = self.CalcLevel(score: user.totalScore)
                 
                 var image:UIImage!
                 if let imageURL = user.profileImage {
@@ -71,12 +74,33 @@ class ProfileViewController: UIViewController {
                             self.PointsLabel.text = String(user.totalScore)
                             self.LevelLabel.text = String(user.level)
                             self.challengesLabel.text = String(user.challenges)
+                            self.progressBar.progress = Float(progress)
                             
                             
                         }
                     }).resume()
                 }
             }
+        }
+    }
+    
+    func CalcLevel(score: Int) -> Int
+    {
+        let Score1 = score / 1000
+        let Score2 = ((score - 10000) / 2000) + 10
+        let Score3 = ((score - 30000) / 3000) + 20
+        
+        if(score  < 10000)
+        {
+            return Score1
+        }
+        else if(score > 10000 && score <= 30000)
+        {
+            return Score2
+        }
+        else
+        {
+            return Score3
         }
     }
     

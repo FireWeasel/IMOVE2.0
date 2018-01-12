@@ -12,6 +12,7 @@ class AddFriendTableViewCell: UITableViewCell {
 
     @IBOutlet weak var profilePicImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
