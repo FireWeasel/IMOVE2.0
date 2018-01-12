@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     var ref: DatabaseReference!
     var refHandle:UInt!
     
+    @IBOutlet weak var checkPasswordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var profileImage:UIImage?
@@ -54,6 +55,17 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             alert.addAction(defaultAction)
             
             present(alert, animated: true, completion: nil)
+            
+        if(passwordTextField.text != checkPasswordTextField.text)
+        {
+            let alert = UIAlertController(title: "Error", message: "Please enter a the same password twice", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(defaultAction)
+            
+            present(alert, animated: true, completion: nil)
+        }
+            
             
         } else {
             let nameEmail = nameTextField.text! + "@email.com";
@@ -118,6 +130,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         nameTextField.text = ""
         passwordTextField.text = ""
+        checkPasswordTextField.text = ""
         
     }
     
