@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tpY-eG-US5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tpY-eG-US5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -236,6 +236,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Q4V-Ka-roh" firstAttribute="leading" secondItem="Bna-Dv-Xhl" secondAttribute="leading" id="02c-GZ-tSn"/>
                             <constraint firstItem="B4C-KL-piU" firstAttribute="leading" secondItem="Bna-Dv-Xhl" secondAttribute="leading" id="0BQ-Pt-Df0"/>
@@ -258,6 +259,9 @@
                             <constraint firstItem="3Ho-Ky-dIW" firstAttribute="trailing" secondItem="iY8-Hm-yiy" secondAttribute="trailing" constant="325" id="zxn-70-Rwo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Ho-Ky-dIW"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xQR-qf-dGc" appends="YES" id="aSJ-Bq-7RI"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="descLabel" destination="Pg7-8Y-zzO" id="MdI-ka-yte"/>
@@ -268,6 +272,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Np-Wa-qhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xQR-qf-dGc">
+                    <connections>
+                        <action selector="Tap:" destination="fT2-Uw-x8o" id="Ic9-17-x29"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-5578.3999999999996" y="-1453.2233883058473"/>
         </scene>
@@ -320,7 +329,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3O-xD-TOi">
-                                                            <rect key="frame" x="72" y="11" width="42" height="21"/>
+                                                            <rect key="frame" x="15" y="11" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -328,7 +337,7 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="n3O-xD-TOi" firstAttribute="centerY" secondItem="gHA-j4-fI7" secondAttribute="centerY" id="egU-yM-65X"/>
-                                                        <constraint firstItem="n3O-xD-TOi" firstAttribute="leading" secondItem="gHA-j4-fI7" secondAttribute="leadingMargin" constant="57" id="kqu-8o-zGQ"/>
+                                                        <constraint firstItem="n3O-xD-TOi" firstAttribute="leading" secondItem="gHA-j4-fI7" secondAttribute="leadingMargin" id="kqu-8o-zGQ"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -1585,7 +1594,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iZ-3w-fMt">
-                                <rect key="frame" x="16" y="617" width="107.5" height="30"/>
+                                <rect key="frame" x="16" y="617" width="108" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2iZ-3w-fMt" secondAttribute="height" multiplier="68:19" id="LFa-Ou-nww"/>
@@ -1597,8 +1606,15 @@
                                     <action selector="logOut:" destination="QPS-pE-1OD" eventType="touchUpInside" id="0dM-Ld-Zlc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVd-mD-e2c">
-                                <rect key="frame" x="239" y="617" width="108" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PL-ar-8OJ">
+                                <rect key="frame" x="293" y="509" width="38" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVd-mD-e2c">
+                                <rect key="frame" x="251" y="617" width="108" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KVd-mD-e2c" secondAttribute="height" multiplier="68:19" id="Asz-Tt-5AO"/>
@@ -1610,20 +1626,13 @@
                                     <segue destination="c7n-EX-Qrn" kind="show" id="gF3-Ra-7ts"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PL-ar-8OJ">
-                                <rect key="frame" x="293" y="509" width="38" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GwT-yS-lmK" firstAttribute="bottom" secondItem="2iZ-3w-fMt" secondAttribute="bottom" constant="20" id="EgD-6X-rsx"/>
                             <constraint firstItem="2iZ-3w-fMt" firstAttribute="leading" secondItem="GwT-yS-lmK" secondAttribute="leading" constant="16" id="PsV-cZ-rcH"/>
                             <constraint firstItem="GwT-yS-lmK" firstAttribute="bottom" secondItem="KVd-mD-e2c" secondAttribute="bottom" constant="20" id="W6f-KH-dBo"/>
-                            <constraint firstItem="GwT-yS-lmK" firstAttribute="trailing" secondItem="KVd-mD-e2c" secondAttribute="trailing" constant="29" id="g0s-00-KKF"/>
+                            <constraint firstItem="GwT-yS-lmK" firstAttribute="trailing" secondItem="KVd-mD-e2c" secondAttribute="trailing" constant="16" id="g0s-00-KKF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GwT-yS-lmK"/>
                     </view>
@@ -2530,7 +2539,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfQ-Th-pBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="hzn-HE-psf">
                     <connections>
-                        <action selector="SetImage:" destination="a2i-ka-yBE" id="GGJ-4g-bvi"/>
+                        <action selector="HideKeyboard:" destination="a2i-ka-yBE" id="7dz-9E-zuE"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

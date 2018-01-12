@@ -35,6 +35,13 @@ class GroupViewController: UIViewController {
     }
     
     //MARK: Actions
+    
+    @IBAction func Tap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+    
+    
     @IBAction func Login(_ sender: Any) {
         if(nameTextfield.text == "admin" && passwordTextfield.text == "admin")
         {
