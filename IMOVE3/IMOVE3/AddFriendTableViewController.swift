@@ -55,7 +55,9 @@ class AddFriendTableViewController: UITableViewController {
                     return
                 }
                 DispatchQueue.main.async {
-                    cell.profilePicImageView?.image = UIImage(data: data!)
+                    let image = UIImage(data:data!)
+                    cell.profilePicImageView?.image = image
+                    cell.profilePicImageView.layer.cornerRadius = (image?.size.width)!/2
                 }
             }).resume()
         }

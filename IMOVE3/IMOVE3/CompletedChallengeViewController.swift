@@ -66,7 +66,7 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
                     return
                 }
                 DispatchQueue.main.async {
-                    cell.imageView?.image = UIImage(data: data!)
+                    //cell.imageView?.image = UIImage(data: data!)
                 }
             }).resume()
         }
