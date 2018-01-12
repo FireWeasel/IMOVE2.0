@@ -14,13 +14,15 @@ class User:NSObject {
     var totalScore:Int!
     var level:Int!
     var profileImage:String?
+    var challenges:Int!
     
     
-    init(name: String, profileImage: String, totalScore: Int, level: Int ) {
+    init(name: String, profileImage: String, totalScore: Int, level: Int,challenges:Int ) {
         self.name = name
         self.profileImage = profileImage
         self.level = level
         self.totalScore = totalScore
+        self.challenges = challenges
     }
     
     init(name: String, profileImage:String, level:Int) {
@@ -28,5 +30,6 @@ class User:NSObject {
         self.profileImage = profileImage
         self.level = level
         self.totalScore = 0
+        self.challenges = 0
     }
 }

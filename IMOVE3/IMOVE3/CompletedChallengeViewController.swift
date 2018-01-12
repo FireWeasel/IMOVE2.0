@@ -88,8 +88,9 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
                 let level = dictionary["level"] as! Int
                 var totalScore = dictionary["totalScore"] as! Int
                 let profileImage = dictionary["profileImage"] as? String
+                var challenges = dictionary["challenges"] as! Int
                 
-                var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level)
+                var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level, challenges:challenges)
                 
                 /*var image:UIImage!
                 if let imageURL = user.profileImage {
@@ -111,7 +112,8 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
                                 ] as [String : Any]
                             leaderboardHandle.updateChildValues(leaderboardValue)
                             
-                            totalScore = totalScore + self.score;
+                            totalScore = totalScore + self.score
+                            challenges = challenges + 1
                             
                             let userHandle = self.ref.child("Users").child(uid)
                             
@@ -119,7 +121,8 @@ class CompletedChallengeViewController: UIViewController,UITableViewDelegate, UI
                                 "name": name,
                                 "level": self.CalcLevel(score: totalScore),
                                 "totalScore": totalScore,
-                                "profileImage" : profileImage
+                                "profileImage" : profileImage,
+                                "challenges": challenges
                             ] as [String:Any]
                             
                             userHandle.updateChildValues(userValue)

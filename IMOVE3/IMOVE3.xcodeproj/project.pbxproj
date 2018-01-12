@@ -10,7 +10,6 @@
 		4001FD6C246532C4A82430D4 /* Pods_IMOVE3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6257E03156B20F84AF7EBC6 /* Pods_IMOVE3UITests.framework */; };
 		91C57F4B3BE9F0F533A41CB2 /* Pods_IMOVE3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65C94B0547BE03DB4C87FFC /* Pods_IMOVE3.framework */; };
 		9E29497EAD998478F0A9F992 /* Pods_IMOVE3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37789002B9CF7D2704CBFACE /* Pods_IMOVE3Tests.framework */; };
-		F505B09E1FE276580085455D /* SitUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B09D1FE276580085455D /* SitUpViewController.swift */; };
 		F505B0A01FE27B260085455D /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B09F1FE27B260085455D /* CycleViewController.swift */; };
 		F505B0A21FE284D20085455D /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B0A11FE284D20085455D /* FriendViewController.swift */; };
 		F505B0A41FE3CD480085455D /* CompletedChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505B0A31FE3CD480085455D /* CompletedChallengeViewController.swift */; };
@@ -84,7 +83,6 @@
 		B6257E03156B20F84AF7EBC6 /* Pods_IMOVE3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMOVE3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65C94B0547BE03DB4C87FFC /* Pods_IMOVE3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMOVE3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C80F3D9A3B3E6F7F1C21F281 /* Pods-IMOVE3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMOVE3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMOVE3Tests/Pods-IMOVE3Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F505B09D1FE276580085455D /* SitUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitUpViewController.swift; sourceTree = "<group>"; };
 		F505B09F1FE27B260085455D /* CycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
 		F505B0A11FE284D20085455D /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		F505B0A31FE3CD480085455D /* CompletedChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedChallengeViewController.swift; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 				F569FA3D1FE2F4D200B96059 /* ClimbViewController.swift */,
 				F569FA3B1FE2EF3C00B96059 /* RatingViewController.swift */,
 				F5C4BDC41FDA96B600BC64BE /* PushUpViewController.swift */,
-				F505B09D1FE276580085455D /* SitUpViewController.swift */,
 				F505B09F1FE27B260085455D /* CycleViewController.swift */,
 				F505B0A11FE284D20085455D /* FriendViewController.swift */,
 				F569FA391FE2E83E00B96059 /* GroupViewController.swift */,
@@ -621,7 +618,6 @@
 				F568539A1FEBC8480082A7AD /* RewardBuyViewController.swift in Sources */,
 				F517D8E61FEBF04600B1729F /* AddFriendTableViewController.swift in Sources */,
 				F568A2F81FD151A90043215C /* ChallengeAnnotation.swift in Sources */,
-				F505B09E1FE276580085455D /* SitUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

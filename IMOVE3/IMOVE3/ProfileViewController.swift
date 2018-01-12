@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var LevelLabel: UILabel!
     @IBOutlet weak var PointsLabel: UILabel!
     @IBOutlet weak var UserNameLabel: UILabel!
+    @IBOutlet weak var challengesLabel: UILabel!
     
     var ref:DatabaseReference!
     var refHandle:UInt!
@@ -50,8 +51,9 @@ class ProfileViewController: UIViewController {
                 let level = dictionary["level"] as! Int
                 let totalScore = dictionary["totalScore"] as! Int
                 let profileImage = dictionary["profileImage"] as? String
+                var challenges = dictionary["challenges"] as! Int
                 
-                var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level)
+                var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level, challenges: challenges)
                 
                 var image:UIImage!
                 if let imageURL = user.profileImage {
@@ -68,6 +70,7 @@ class ProfileViewController: UIViewController {
                             self.UserNameLabel.text = user.name
                             self.PointsLabel.text = String(user.totalScore)
                             self.LevelLabel.text = String(user.level)
+                            self.challengesLabel.text = String(user.challenges)
                             
                             
                         }

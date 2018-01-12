@@ -82,8 +82,9 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let level = dictionary["level"] as! Int
                 let totalScore = dictionary["totalScore"] as! Int
                 let profileImage = dictionary["profileImage"] as? String
+                var challenge = dictionary["challenges"] as! Int
                 
-                var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level)
+                var user = User(name: name, profileImage: profileImage!, totalScore: totalScore, level: level, challenges: challenge)
                 
                 var image:UIImage!
                 if let imageURL = user.profileImage {

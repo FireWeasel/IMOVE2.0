@@ -43,8 +43,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         var name = nameTextField.text
         var password = passwordTextField.text
         var img = profileImage
-        var level = 1;
-        var totalScore = 0;
+        var level = 1
+        var totalScore = 0
+        var challenges = 0
         var logedIn = false;
         print(self.profileImage)
         
@@ -91,6 +92,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                                     "level" : level,
                                     "profileImage" : productImageURL,
                                     "totalScore" : totalScore,
+                                    "challenges" : challenges
                                     ] as [String : Any]
                                 self.ref.child("Users").child(uid).setValue(value)
                             }
