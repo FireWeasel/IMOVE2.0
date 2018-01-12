@@ -14,6 +14,15 @@ class CustomAnnotationView: UIView {
     @IBOutlet weak var challengeDescription: UILabel!
     @IBOutlet weak var navigateButton: UIButton!
     @IBOutlet weak var toughnessLabel: UILabel!
+    
+    
+    @IBOutlet weak var firstDif: UIImageView!
+    
+    @IBOutlet weak var secondDif: UIImageView!
+    @IBOutlet weak var thirdDif: UIImageView!
+    @IBOutlet weak var forthDif: UIImageView!
+    @IBOutlet weak var fifthDif: UIImageView!
+    
     var leaderboard = [LeaderBoard]()
     
     

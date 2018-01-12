@@ -160,6 +160,47 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         calloutView.challengeName.text = challengeAnnotation.name
         calloutView.challengeDescription.text = challengeAnnotation.desc
         calloutView.toughnessLabel.text = challengeAnnotation.rating
+        if(challengeAnnotation.rating == String(1))
+        {
+            calloutView.firstDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.secondDif.image = #imageLiteral(resourceName: "vuurding-1")
+            calloutView.thirdDif.image = #imageLiteral(resourceName: "vuurding-1")
+            calloutView.forthDif.image = #imageLiteral(resourceName: "vuurding-1")
+            calloutView.fifthDif.image = #imageLiteral(resourceName: "vuurding-1")
+        }
+        else if (challengeAnnotation.rating == String(2))
+        {
+            calloutView.firstDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.secondDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.thirdDif.image = #imageLiteral(resourceName: "vuurding-1")
+            calloutView.forthDif.image = #imageLiteral(resourceName: "vuurding-1")
+            calloutView.fifthDif.image = #imageLiteral(resourceName: "vuurding-1")
+            
+        }
+        else if(challengeAnnotation.rating == String(3))
+        {
+            calloutView.firstDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.secondDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.thirdDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.forthDif.image = #imageLiteral(resourceName: "vuurding-1")
+            calloutView.fifthDif.image = #imageLiteral(resourceName: "vuurding-1")
+        }
+        else if(challengeAnnotation.rating == String(4))
+        {
+            calloutView.firstDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.secondDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.thirdDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.forthDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.fifthDif.image = #imageLiteral(resourceName: "vuurding-1")
+        }
+        else if(challengeAnnotation.rating == String(5))
+        {
+            calloutView.firstDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.secondDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.thirdDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.forthDif.image = #imageLiteral(resourceName: "vuurding-3")
+            calloutView.fifthDif.image = #imageLiteral(resourceName: "vuurding-3")
+        }
         refHandle = ref.child("Leaderboards").child(challengeAnnotation.name).observe(.childAdded, with: {(snapshot) in
             if let dictionary = snapshot.value as? [String:AnyObject] {
                 let name = dictionary["name"] as! String

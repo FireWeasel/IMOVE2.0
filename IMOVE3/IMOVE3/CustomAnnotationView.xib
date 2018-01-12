@@ -47,21 +47,48 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJp-Qc-fMK">
-                    <rect key="frame" x="0.0" y="228" width="320" height="185"/>
+                    <rect key="frame" x="0.0" y="265" width="320" height="148"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toughness:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnX-fI-5XJ">
-                    <rect key="frame" x="16" y="203" width="94" height="21"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZP-Sl-xu4">
+                    <rect key="frame" x="272" y="203" width="32" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZP-Sl-xu4">
-                    <rect key="frame" x="272" y="203" width="32" height="21"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Path 4-1" translatesAutoresizingMaskIntoConstraints="NO" id="Urg-zd-Ucc">
+                    <rect key="frame" x="47" y="246" width="37" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Path 4-1" translatesAutoresizingMaskIntoConstraints="NO" id="vVP-tZ-jfx">
+                    <rect key="frame" x="96" y="246" width="36" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Path 4-1" translatesAutoresizingMaskIntoConstraints="NO" id="PZi-pj-G06">
+                    <rect key="frame" x="145" y="246" width="35" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Path 4-1" translatesAutoresizingMaskIntoConstraints="NO" id="eRW-8W-dEN">
+                    <rect key="frame" x="193" y="246" width="35" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Path 4-1" translatesAutoresizingMaskIntoConstraints="NO" id="jOb-5I-GfN">
+                    <rect key="frame" x="241" y="246" width="35" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z94-xy-h5E">
+                    <rect key="frame" x="87" y="187" width="16" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-R3-4Hv">
+                    <rect key="frame" x="209" y="187" width="16" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -71,10 +98,18 @@
                 <outlet property="challengeDescription" destination="InA-4m-2yE" id="lDf-gB-wR5"/>
                 <outlet property="challengeImage" destination="LJp-Qc-fMK" id="WCc-ue-trD"/>
                 <outlet property="challengeName" destination="bx2-pO-NO6" id="lb9-Pj-MJa"/>
+                <outlet property="fifthDif" destination="jOb-5I-GfN" id="YHu-Nw-jNp"/>
+                <outlet property="firstDif" destination="Urg-zd-Ucc" id="7s8-0o-MLa"/>
+                <outlet property="forthDif" destination="eRW-8W-dEN" id="fYf-7F-p3W"/>
                 <outlet property="navigateButton" destination="ov3-PO-Bua" id="0jv-0d-wGe"/>
+                <outlet property="secondDif" destination="vVP-tZ-jfx" id="62J-0U-eL4"/>
+                <outlet property="thirdDif" destination="PZi-pj-G06" id="PX7-aq-hvM"/>
                 <outlet property="toughnessLabel" destination="8ZP-Sl-xu4" id="ipi-rb-giY"/>
             </connections>
             <point key="canvasLocation" x="-189" y="-98"/>
         </view>
     </objects>
+    <resources>
+        <image name="Path 4-1" width="35" height="34"/>
+    </resources>
 </document>
