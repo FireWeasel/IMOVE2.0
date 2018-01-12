@@ -45,6 +45,7 @@
 		F569FA441FE3E31D00B96059 /* PlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA431FE3E31D00B96059 /* PlankViewController.swift */; };
 		F569FA461FE3E92E00B96059 /* TricepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569FA451FE3E92E00B96059 /* TricepViewController.swift */; };
 		F57630A51FECF6A700ECDC85 /* AddFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57630A41FECF6A700ECDC85 /* AddFriendTableViewCell.swift */; };
+		F57C02792008CADA001BEC4A /* RewardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C02782008CADA001BEC4A /* RewardCollectionViewCell.swift */; };
 		F57D266C1FEBA3A200501742 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D266B1FEBA3A200501742 /* LeaderboardTableViewCell.swift */; };
 		F5854B0D20075A8F007EB6B8 /* GuideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5854B0C20075A8F007EB6B8 /* GuideTableViewController.swift */; };
 		F5854B0F20075D33007EB6B8 /* GuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5854B0E20075D33007EB6B8 /* GuideTableViewCell.swift */; };
@@ -124,6 +125,7 @@
 		F569FA431FE3E31D00B96059 /* PlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankViewController.swift; sourceTree = "<group>"; };
 		F569FA451FE3E92E00B96059 /* TricepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricepViewController.swift; sourceTree = "<group>"; };
 		F57630A41FECF6A700ECDC85 /* AddFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendTableViewCell.swift; sourceTree = "<group>"; };
+		F57C02782008CADA001BEC4A /* RewardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCollectionViewCell.swift; sourceTree = "<group>"; };
 		F57D266B1FEBA3A200501742 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		F5854B0C20075A8F007EB6B8 /* GuideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideTableViewController.swift; sourceTree = "<group>"; };
 		F5854B0E20075D33007EB6B8 /* GuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideTableViewCell.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				F511CE731FC6BA6C004A5A53 /* ViewController.swift */,
 				F517D8E11FEBE43D00B1729F /* LaunchScreenViewController.swift */,
 				F511CE751FC6BA6C004A5A53 /* Main.storyboard */,
+				F57C02782008CADA001BEC4A /* RewardCollectionViewCell.swift */,
 				F5854B1420076F58007EB6B8 /* GuideViewController.swift */,
 				F57630A41FECF6A700ECDC85 /* AddFriendTableViewCell.swift */,
 				F517D8E51FEBF04600B1729F /* AddFriendTableViewController.swift */,
@@ -588,6 +591,7 @@
 				F505B0A41FE3CD480085455D /* CompletedChallengeViewController.swift in Sources */,
 				F568A3361FD932A50043215C /* RegisterViewController.swift in Sources */,
 				F511CE741FC6BA6C004A5A53 /* ViewController.swift in Sources */,
+				F57C02792008CADA001BEC4A /* RewardCollectionViewCell.swift in Sources */,
 				F568A3381FD96FC30043215C /* TabBarViewController.swift in Sources */,
 				F517D8E21FEBE43F00B1729F /* LaunchScreenViewController.swift in Sources */,
 				F56853981FEBBE2A0082A7AD /* Reward.swift in Sources */,

@@ -10,22 +10,27 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RewardsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+   
+    
     
     
 
     @IBOutlet weak var pointsLabel: UILabel!
-    @IBOutlet weak var tableRewards: UITableView!
+    @IBOutlet weak var collectionRewards: UICollectionView!
     
     var ref:DatabaseReference!
     var refHandle:UInt!
+    
     
     var rewards = [Reward]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableRewards.delegate = self
-        tableRewards.dataSource = self
+        
+        collectionRewards.delegate = self
+        collectionRewards.dataSource = self
+        
         ref = Database.database().reference()
         LoadProfile()
         LoadRewards()
@@ -38,18 +43,16 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     //MARK: Functions
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return rewards.count
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RewardCell", for:indexPath) as! RewardTableViewCell
-        cell.rewardName?.text = rewards[indexPath.row].name
-        cell.rewardPoints?.text = String(rewards[indexPath.row].points)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RewardColCell", for:indexPath) as! RewardCollectionViewCell
+        cell.nameLabel?.text = rewards[indexPath.row].name
+        cell.pointsLabel?.text = String(rewards[indexPath.row].points)
         return cell
     }
-    
-    
     
     
     func LoadRewards()
@@ -65,7 +68,7 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
                 self.rewards.append(reward)
                 DispatchQueue.main.async {
-                    self.tableRewards.reloadData()
+                    self.collectionRewards.reloadData()
                 }
             }
         })
@@ -107,8 +110,10 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ChooseRewards" {
-            if let indexPath = self.tableRewards.indexPathForSelectedRow {
+        if segue.identifier == "ChooseRewards2" {
+            let cell = sender as! UICollectionViewCell
+            if let indexPath = self.collectionRewards.indexPath(for: cell) {
+                print(indexPath)
                 let controller = segue.destination as! RewardBuyViewController
                 let value = rewards[indexPath.row]
                 let points = Int(pointsLabel.text!)
