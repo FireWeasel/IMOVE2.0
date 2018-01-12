@@ -32,6 +32,14 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func logOut(_ sender: Any) {
+        
+        try! Auth.auth().signOut()
+        if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "launchScreen") as! LaunchScreenViewController
+            self.present(vc, animated: false, completion: nil)
+        }
+    }
     //MARK: Functions
     func LoadProfile()
     {
