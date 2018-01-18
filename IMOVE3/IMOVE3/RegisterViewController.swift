@@ -11,7 +11,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
 
-class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     var ref: DatabaseReference!
     var refHandle:UInt!
@@ -25,6 +25,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
          ref = Database.database().reference()
+        self.nameTextField.delegate = self
+        self.passwordTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -180,15 +182,15 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     {
         dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (string == "\n") {
+            nameTextField.resignFirstResponder()
+            passwordTextField.resignFirstResponder()
+            return false
+        }
+        return true
     }
-    */
 
 }
 
